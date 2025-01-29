@@ -22,9 +22,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt    
     - name: Run backend tests
-      run: |
-        cd /home/runner/work/KPMG/KPMG/manage.py
-        python manage.py test    
+      run: python backend/manage.py test
+        
+        
         
     - name: Set up Node.js
       uses: actions/setup-node@v3
