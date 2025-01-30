@@ -19,6 +19,9 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
+    - name: Verify tsconfig.build.json
+      run: |
+        if [ ! -f tsconfig.build.json ]; then echo "tsconfig.build.json not found"; exit 1; fi    
     - name: Run tests
       run: |
         npm test
